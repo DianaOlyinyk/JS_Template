@@ -1,0 +1,164 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #fffbe6;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  color: orange;
+  line-height: 1.2;
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+}
+
+.pizza-menu {
+  flex: 3;
+}
+
+.filters button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.pizza-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pizza-card {
+  background: white;
+  padding: 15px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #ccc;
+  position: relative;
+}
+
+.pizza-card img {
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+}
+
+.label.red {
+  background: red;
+}
+
+.label.green {
+  background: green;
+}
+
+.prices button {
+  background: orange;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clear-cart {
+  background: none;
+  border: none;
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-item {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-info {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.cart-item-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.cart-item-controls button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.order-btn {
+  background: linear-gradient(to top, orange, #f8a600);
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.order-btn {
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+}
+
