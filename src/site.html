@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizza KMA</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="site.js"></script>
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="logo">PIZZA<br>KMA</div>
+    <div class="contact">044 222 5 222<br><small>24/7 доставка</small></div>
+    <nav>Безкоштовна доставка піци</nav>
+    <button class="login-btn">Вийти</button>
+  </header>
+
+  <main class="content">
+    <section class="pizza-menu">
+      <h2>Усі піци</h2>
+      <div class="filters">
+        <button class="active">Усі</button>
+        <button>М’ясні</button>
+        <button>З ананасами</button>
+        <button>З грибами</button>
+        <button>З морепродуктами</button>
+        <button>Вага</button>
+      </div>
+
+      <div class="pizza-list"> 
+        <div class="pizza-card">
+          <img src="images\pizza_1.jpg" alt="Impreza" />
+          <span class="label red">Нова</span>
+          <h3>Impreza</h3>
+          <p>Балик, салямі, куриця, сир моцарелла...</p>
+          <div class="sizes">
+            <div>30см • 370г</div><div>40см • 660г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Impreza" data-size="Мала" data-price="99">99 грн</button>
+            <button class="buy-btn" data-name="Impreza" data-size="Велика" data-price="169">169 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_2.jpg" alt="BBQ" />
+          <span class="label green">Популярна</span>
+          <h3>BBQ</h3>
+          <p>Мисливські ковбаски, ковбаса салямі, шинка...</p>
+          <div class="sizes">
+            <div>30см • 400г</div><div>40см • 780г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="BBQ" data-size="Мала" data-price="139">139 грн</button>
+            <button class="buy-btn" data-name="BBQ" data-size="Велика" data-price="199">199 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_3.jpg" alt="BBQ" />
+          <h3>Міксове Поло</h3>
+          <p>Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</p>
+          <div class="sizes">
+            <div>30см • 430г</div><div>40см • 780г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Mix" data-size="Мала" data-price="139">115 грн</button>
+            <button class="buy-btn" data-name="Mix" data-size="Велика" data-price="199">179 грн</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <aside class="cart">
+    <div class="cart-header">
+      <h3>Замовлення <span id="cart-count">0</span></h3>
+      <button id="clear-cart" class="clear-cart">Очистити замовлення</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+      <div>
+        Сума замовлення: <strong id="cart-total">0 грн</strong>
+      </div>
+      <button class="order-btn">Замовити</button>
+    </div>
+  </aside>
+
+  </main>
+</body>
+</html>
