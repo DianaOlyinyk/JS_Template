@@ -6,6 +6,7 @@
   <title>Pizza KMA</title>
   <link rel="stylesheet" href="style.css" />
   <script src="site.js"></script>
+  <link rel="icon" href="images\home-icon.png" type="image/png">
 </head>
 
 <body>
@@ -20,22 +21,28 @@
     <section class="pizza-menu">
       <h2>Усі піци</h2>
       <div class="filters">
-        <button class="active">Усі</button>
-        <button>М’ясні</button>
-        <button>З ананасами</button>
-        <button>З грибами</button>
-        <button>З морепродуктами</button>
-        <button>Вага</button>
+        <button data-filter="усі" class="filter active">Усі</button>
+        <button data-filter="м’ясна" class="filter">М’ясні</button>
+        <button data-filter="ананаси" class="filter">З ананасами</button>
+        <button data-filter="гриби" class="filter">З грибами</button>
+        <button data-filter="морепродукти" class="filter">З морепродуктами</button>
       </div>
 
       <div class="pizza-list"> 
         <div class="pizza-card">
-          <img src="images\pizza_1.jpg" alt="Impreza" />
+          <img src="images\pizza_7.jpg" alt="Impreza" />
           <span class="label red">Нова</span>
           <h3>Impreza</h3>
           <p>Балик, салямі, куриця, сир моцарелла...</p>
           <div class="sizes">
-            <div>30см • 370г</div><div>40см • 660г</div>
+            <div>
+              <img src="images/size-icon.svg" alt="Розмір" class="icon" /> 30см •
+              <img src="images/weight.svg" alt="Вага" class="icon" /> 370г
+            </div>
+            <div>
+              <img src="images/size-icon.svg" alt="Розмір" class="icon" /> 40см •
+              <img src="images/weight.svg" alt="Вага" class="icon" /> 660г
+            </div>
           </div>
           <div class="prices">
             <button class="buy-btn" data-name="Impreza" data-size="Мала" data-price="99">99 грн</button>
@@ -58,15 +65,94 @@
         </div>
 
         <div class="pizza-card">
-          <img src="images\pizza_3.jpg" alt="BBQ" />
-          <h3>Міксове Поло</h3>
+          <img src="images\pizza_1.jpg"/>
+          <h3>Міксовий Поло</h3>
           <p>Вітчина, куриця копчена, сир моцарелла, ананаси, кукурудза, петрушка, соус томатний</p>
           <div class="sizes">
             <div>30см • 430г</div><div>40см • 780г</div>
           </div>
           <div class="prices">
-            <button class="buy-btn" data-name="Mix" data-size="Мала" data-price="139">115 грн</button>
-            <button class="buy-btn" data-name="Mix" data-size="Велика" data-price="199">179 грн</button>
+            <button class="buy-btn" data-name="Міксовий поло" data-size="Мала" data-price="115">115 грн</button>
+            <button class="buy-btn" data-name="Міксовий поло" data-size="Велика" data-price="179">179 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_4.jpg"/>
+          <h3>Руссо Густо</h3>
+          <p>Лосось, ікра, сир моцарелла...</p>
+          <div class="sizes">
+            <div>30см • 400г</div><div>40см • 750г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Руссо Густо" data-size="Мала" data-price="169">169 грн</button>
+            <button class="buy-btn" data-name="Руссо Густо" data-size="Велика" data-price="219">219 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_6.jpg"/>
+          <h3>Грибна</h3>
+          <p>шампіньйони, ковбаса мисливська...</p>
+          <div class="sizes">
+            <div>30см • 380г</div><div>40см • 720г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Грибна" data-size="Мала" data-price="110">110 грн</button>
+            <button class="buy-btn" data-name="Грибна" data-size="Велика" data-price="179">179 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_8.jpg"/>
+          <h3>Королева Моря</h3>
+          <p>Креветки, ікра, мідії, рачки та ін. морепродукти ...</p>
+          <div class="sizes">
+            <div>30см • 390г</div><div>40см • 720г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Королева Моря" data-size="Мала" data-price="189">189 грн</button>
+            <button class="buy-btn" data-name="Королева Моря" data-size="Велика" data-price="259">259 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_3.jpg"/>
+          <span class="label red">Знижка</span>
+          <h3>Маргарита</h3>
+          <p>помідори, томатний соус, сир моцарелла...</p>
+          <div class="sizes">
+            <div>30см • 350г</div><div>40см • 680г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Маргарита" data-size="Мала" data-price="99">99 грн</button>
+            <button class="buy-btn" data-name="Маргарита" data-size="Велика" data-price="159">159 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_9.jpg"/>
+          <h3>Карбонара</h3>
+          <p>Вітчина, бекон, ковбаса, сир моцарелла...</p>
+          <div class="sizes">
+            <div>30см • 400г</div><div>40см • 750г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Карбонара" data-size="Мала" data-price="109">109 грн</button>
+            <button class="buy-btn" data-name="Карбонара" data-size="Велика" data-price="169">169 грн</button>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img src="images\pizza_5.jpg"/>
+          <h3>Салямі з грибами та перцем</h3>
+          <p>Вітчина, салямі, шампіньйони, зелений перець, жовтий перець...</p>
+          <div class="sizes">
+            <div>30см • 400г</div><div>40см • 750г</div>
+          </div>
+          <div class="prices">
+            <button class="buy-btn" data-name="Салямі" data-size="Мала" data-price="119">119 грн</button>
+            <button class="buy-btn" data-name="Салямі" data-size="Велика" data-price="165">165 грн</button>
           </div>
         </div>
       </div>
